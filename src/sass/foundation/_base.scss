@@ -1,0 +1,56 @@
+@charset "utf-8";
+/*
+ * foundation/base.css
+ */
+ul, ol, li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+}
+
+.input-text {
+  width: calc(100% - 50px);
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.button {
+  background-color: #666;
+  color: #fff;
+  &:disabled {
+    opacity: .25;
+  }
+}
+
+.list {
+  padding: 10px;
+  &__item {
+    position: relative;
+    margin-bottom: 10px;
+    padding: 10px 0 10px 10px;
+    border-bottom: 1px solid #ddd;
+    &:last-of-type {
+      margin-bottom: 10px;
+    }
+    .delete {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: auto;
+      right: 0;
+      margin: auto;
+      height: 18px;
+      background-color: #666;
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+// foundation/_mixins.scss
+
+// color
+$txt-white-color: #fff;
+
+$txt-base-color: #333;
+
+$link-base-color: #dfdfdf;
+
+$bg-base-color: #ccc;
+
+// background-image base-path
+@mixin bg-img($path) {
+	background-image: url("/assets/pc/img/" + $path + "?v=" + random(999999));
+}
+@mixin bg-img-common($path) {
+	background-image: url("/assets/common/img/" + $path + "?v=" + random(999999));
+}
+
+// font-size
+$font-size-base-px: 12px;
+$font-size-base-rem: 1.2rem;
+
+@mixin fs($font-size:$font-size-base-px) {
+	font-size: $font-size;
+	font-size: ($font-size / 10)rem;
+}
+@mixin fs-base {
+	font-size: $font-size-base-px;
+	font-size: $font-size-base-rem;
+}
+@mixin fs8 {
+	font-size: .8rem;
+}
+@mixin fs9 {
+	font-size: .9rem;
+}
+@mixin fs10 {
+	font-size: 1rem;
+}
+@mixin fs11 {
+	font-size: 1.1rem;
+}
+@mixin fs12 {
+	font-size: 1.2rem;
+}
+@mixin fs14 {
+	font-size: 1.4rem;
+}
+@mixin fs16 {
+	font-size: 1.6rem;
+}
+@mixin fs18 {
+	font-size: 1.8rem;
+}
+@mixin fs20 {
+	font-size: 2rem;
+}
+@mixin fs25 {
+	font-size: 2.5rem;
+}
+@mixin fs30 {
+	font-size: 3rem;
+}
+@mixin fs40 {
+	font-size: 4rem;
+}
+
+// box-shadow
+@mixin box-shadow($color) {
+	box-shadow: 0 1px 2px $color;
+}
+@mixin box-shadow-base {
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+}
+
+// line-clamp
+@mixin line-clamp($line-num) {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: $line-num;
+}
